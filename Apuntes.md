@@ -74,11 +74,11 @@ No es posible crear constantes en Python, todos los elementos pueden cambiar su 
 #### Operadores Aritmeticos
 - **+** Suma
 - **-** Resta
-- * Multiplicacion
+- _*_ Multiplicacion
 - **/** Division
 - **//** Division entera
 - **%** Modulo
-- * *   Potenciacion
+- _**_   Potenciacion
 
 
 #### Operadores Comparativos
