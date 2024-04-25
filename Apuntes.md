@@ -226,28 +226,28 @@ Muestra desde el primer indice hasta el degundo y luego se indica el incremento 
 
 ### Metodos de Strings
 
-- **Capitalize** pone en mayuscula al primer elemento de la cadena.
+**Capitalize** pone en mayuscula al primer elemento de la cadena.
 
 	texto = "hola mundo"
 	print(texto.capitalize())  # Salida: Hola mundo
 
 
-- **Upper** pone todos los elemetos en Mayusculas.
+**Upper** pone todos los elemetos en Mayusculas.
 
 	print(texto.upper())  # Salida: HOLA MUNDO
 
 
-- **Lower** pone todos los elementos en Minusculas.
+**Lower** pone todos los elementos en Minusculas.
 
 	print(texto.lower())  # Salida: hola mundo
 
 
-- **Tittle** pone en mayuscula la primera letra de cada palabra.
+**Tittle** pone en mayuscula la primera letra de cada palabra.
 
 	print(texto.tittle())  # Salida: Hola Mundo
 
 
-- **Count** cuenta la cantidad de veces que aparece una letra en el texto.
+**Count** cuenta la cantidad de veces que aparece una letra en el texto.
 
 	print(texto.count("o"))  # Salida: 2
 
