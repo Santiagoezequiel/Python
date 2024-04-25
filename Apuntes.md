@@ -35,29 +35,26 @@ Python es un lenguaje con tipado dinamico, osea que podemos cambiar el tipo de v
 
 Las variables deben estar escritas solo en minusculas y con **"_"** para separar las palabras.
 
-**mi_variable** = 30
+	mi_variable = 30
 
 
 Podes imprimir multiples variables separandolas con una coma **‘,’** .
 
-**print**(**mi_variable**, **variable_dos**, **variable_bool**)
+	print(mi_variable, variable_dos, variable_bool)
 
 
 Tambien podemos cambiar de tipo a las variables. Por ej: 
 El valor ingresado en uninput siempre es un string por defecto. Pero si recibimos de un input un valor numerico y necesitamos operarlo, debemos de cambiar el tipo de **STR** a **INT**.
 
-
-**valor_recibido** = " 30 "				Str --> Int
-
-
-**cambio_de_Valor** = **int**(valor_recibido)
+	valor_recibido = " 30 "				Str --> Int
+	cambio_de_Valor = int(valor_recibido)
 
 
 *O en el caso contrario*
 
-**valor_variable** = 30					Int --> Str
+	valor_variable = 30					Int --> Str
 
-**cambio_de_Valor** = **str**(valor_variable)
+	cambio_de_Valor = str(valor_variable)
 
 ### Constantes
 
@@ -65,9 +62,9 @@ No es posible crear constantes en Python, todos los elementos pueden cambiar su 
 
 ### Inputs
 
-**Variable** = **input**("Mensaje")         *Input tipo STR*
+	Variable = input("Mensaje")         #Input tipo STR
 
-**Variable_numerica** = **int**(**input**("Mensaje"))
+	Variable_numerica = int(input("Mensaje"))
 
 ### Operadores
 
@@ -93,55 +90,54 @@ Devuelven True o False
 
 ### Strings
 
-- **\n**	Salto de linea
+**\n**	Salto de linea
 
-**print**("Este es un string\nCon salto de linea")
+	print("Este es un string\nCon salto de linea")
 
-**Salida:**
-                Este es un string
+	Salida:		Este es un string
                 Con salto de linea
 
 
-- **\t**	Tabulacion
-**print**("\tEste es un string con tabulación en linea") 
+**\t**	Tabulacion
+
+	print("\tEste es un string con tabulación en linea") 
  
-**Salida:**         Este es un string con tabulación en linea
+	Salida:         Este es un string con tabulación en linea
 
 
-- **\\**	Escapado
-**print**("**\\**t Este string **\\**n ignora las anteriores secuencias.")
+**\\**	Escapado
 
-**Salida:** \t Este string \n ignora las anteriores secuencias.
+	print("\\t Este string \\n ignora las anteriores secuencias.")
+
+	Salida: \t Este string \n ignora las anteriores secuencias.
 
 
 ### CONCATENAR VARIABLES Y STRINGS
 Existen varias maneras para concatenar variables dentro de strings.
 La mas comun es interrumpiendo y separando el string y las variables, esta forma no se recomienda para textos largos ya que es mas complicado programarlo y es mas propenso a conllevar errores. La mejor manera para concatenar strings y variables es con Format stings.
 
-**nombre** = "Juan"
-**edad** = 30
-
-**print**("Mi nombre es", **nombre**, "y tengo", **edad**, "años.")
+	nombre = "Juan"
+	edad = 30
+	print("Mi nombre es", nombre, "y tengo", edad, "años.")
 
 
 #### **Format string**
 
 Colocando una **f** al inicio del string podras colocar las variables en { } . Esta es la mejor manera para formatos de codigo simple.
 
-**nombre** = "Juan"
-**edad** = 30
-
-**print**(**f**"Mi nombre es **{nombre}** y tengo **{edad}** años.")
+	nombre = "Juan"
+	edad = 30
+	print(f"Mi nombre es {nombre} y tengo {edad} años.")
 
  
 
 
-- Colocando operadores para cada variables y luego con **%()** indicarlas en orden.
+- Colocando operadores para cada variables y luego con %() indicarlas en orden.
 
-**nombre** = "Juan"
-**edad** = 30
+	nombre = "Juan"
+	edad = 30
+	print("Mi nombre es %s y tengo %d años." %(name,edad))
 
-**print**("Mi nombre es **%s** y tengo **%d** años." **%(name,edad)**)
 
 - **%s**  Para los strings.
 - **%d**  Para los integers.
@@ -154,61 +150,62 @@ De esta manera se corroborá que cada valor que se le pasa al string es del tipo
 
 Esta manera es similar a la anterior pero en esta se encierra con { } donde queremos insertar los elementos, esta manera es mas sencilla de programar pero no se asegura que los elementos sean del tipo correcto.
 
-**nombre** = "Juan"
-**edad** = 30
-
-**print**("Mi nombre es **{}** y tengo **{}** años."**.format(name,edad)**)
+	nombre = "Juan"
+	edad = 30
+	print("Mi nombre es {} y tengo {} años.".format(name,edad))
 
 
 
 
 ### Desempaquetado de Caracteres
+
 El "desempaquetado" de caracteres en Python se refiere a descomprimir una secuencia de caracteres en variables individuales. Esto se puede hacer fácilmente en Python utilizando una sintaxis simple. Por ejemplo:
-**nombre** = "Santiago"
 
-**a, b, c, d, e, f, g, h** = nombre
-print(a)
-print(d)
-print(e)
-print(f)
-
-**Devuelve:**	S	t	g	o
+	nombre = "Santiago"
+	a, b, c, d, e, f, g, h = nombre
+	print(a)
+	print(d)
+	print(e)
+	print(f)
+	Devuelve:	S	t	g	o
 
 
 ### Division de Caracteres
 
 Muestra desde el primer indice hasta el degundo sin contar el segundo.
-**nombre** = "Santiago"
+	
+	nombre = "Santiago"
 
 **slice** = nombre[1:3]
-print(slice)
-
-**Devuelve:**	an
+	
+	print(slice)
+	Devuelve:	an
 
 
 Muestra desde el primer indice en adelante.
 
 **slice** = nombre[1:]
-print(slice)
-
-**Devuelve:**	antiago 
+	
+	print(slice)
+	Devuelve:	antiago 
  
 
 Muestra el elemento contando desde el final hacia atrás.
 
 **slice** = nombre[-1]
-print(slice)
 
-**Devuelve:**	o
+	print(slice)
+
+	Devuelve:	o
  
 
 ### Reversion de Caracteres
 
 
 **reverse** = nombre[::-1]
-print(reverse)
+	print(reverse)
 
-**Devuelve:**	ogaitnaS 
+	Devuelve:	ogaitnaS 
  
 
 
@@ -255,30 +252,30 @@ Muestra desde el primer indice hasta el degundo y luego se indica el incremento 
 #### Comprobaciones de Strings
 Los metodos de strings se pueden concatenar con otros metodos de comprobacion de stings.
 
-- **Isnumeric** verifica si el elemento dado es un numero o no.
+**Isnumeric** verifica si el elemento dado es un numero o no.
 
 	texto = "hola mundo"
 	print(texto.isnumeric())  # Salida: False
 	print("1".isnumeric())  # Salida: True
 
 
-- **Isupper** verifica si el texto tiene todas las letras en Mayusculas.
+**Isupper** verifica si el texto tiene todas las letras en Mayusculas.
 
 	print(texto.upper().isupper())  # Salida: True
 
 
-- **Islower** verifica si el texto tiene todas las letras en Minusculas.
+**Islower** verifica si el texto tiene todas las letras en Minusculas.
 
 	print(texto.lower().islower())  # Salida: True
 
 
-- **Startswith** verifica si el texto comienza con el elemento proporcionado.
+**Startswith** verifica si el texto comienza con el elemento proporcionado.
 
 	texto = "Ultimo hola mundo"
 	print(texto.lower().startswith("Ul"))  # Salida: True
 
 
-- **Endswith** verifica si el texto termina con el elemento proporcionado.
+**Endswith** verifica si el texto termina con el elemento proporcionado.
 
 	texto = "Ultimo hola mundo"
 	print(texto.lower().endswith("do"))  # Salida: True
@@ -361,7 +358,7 @@ No importa en que contexto uses el pop, luego de ejecutarse la lista dejara de t
 
 
 
-##### Como modificar un elemento
+### Como modificar un elemento
 	lista = [1, 2, 3, "Cuatro"]
 	lista[1] = "Dos"
 	print(lista)			Salida: [1, Dos, 3, Cuatro]
@@ -385,15 +382,15 @@ No importa en que contexto uses el pop, luego de ejecutarse la lista dejara de t
 	print(lista)			Salida : [Cuatro, 3, 2, 1]
 
 
-##### Sub-Listas
+### Sub-Listas
 
 Podemos crear una sub-lista indicando desde que elemento hasta que elemento de la lista padre queremos que tenga. Este ira desde el primer indice indicado hasta un elemento antes del segundo indice indicado.
 
-lista = [1, 2, 3, 4, 4.5, 6, 7, 8, 9]  
+	lista = [1, 2, 3, 4, 4.5, 6, 7, 8, 9]  
 
-sub-lista = [1:5]
+	sub-lista = [1:5]
 
-print(sub-lista)			Salida : [2, 3, 4, 4.5]
+	print(sub-lista)			Salida : [2, 3, 4, 4.5]
 
 
 ### **Del vs Remove**
@@ -408,28 +405,28 @@ Son parecidas a las listas pero, las tuplas son inmutables, lo que significa que
 
 ##### Sintaxis para crear una tupla vacia
 
-my_tuple = tuple()
-my_tuple = ( ) 
+	my_tuple = tuple()
+	my_tuple = ( ) 
 
 
 ##### Sintaxis para crear una tupla con elementos
 
-my_tuple = tuple((1, 2, 3, 4))
-my_tuple = (1, 2, 3, 4) 
+	my_tuple = tuple((1, 2, 3, 4))
+	my_tuple = (1, 2, 3, 4) 
 
 
 Las tuplas estan diseñadas para ser seguras ya que no se pueden cambiar sus elementos ni modificarlos de ninguna manera. Pero en un caso extremo que necesitemos cambiar o alterar un tupla, podemos cambiar tu tipo a lista, modificarla y luego volver a convertirla en una tupla.
 
 
-my_tuple = (1, 2, 3, 4) 
+	my_tuple = (1, 2, 3, 4) 
 
-my_tuple = list(my_tuple) 	# De esta manera podemos
+	my_tuple = list(my_tuple) 	# De esta manera podemos
 
-my_tuple[1] = "Dos"		# modificar una tupla
+	my_tuple[1] = "Dos"		# modificar una tupla
 
-my_tuple.insert(2, "Tres")
+	my_tuple.insert(2, "Tres")
 
-my_tuple = tuple(my_tuple)
+	my_tuple = tuple(my_tuple)
 
 
 ## SETS
@@ -438,18 +435,18 @@ Los sets tienen una estructura desordenada, y no permite elementos repetidos. As
 
 ##### Sintaxis para crear una SET vacio
 
-my_set = set()
-my_set = { } 	-->	Esto en primer lugar dara 
-     			que es un diccionario
+	my_set = set()
+	my_set = { } 	-->	Esto en primer lugar dara 
+    		 			que es un diccionario
 
 
 ##### Sintaxis para crear una tupla con elementos
 
-my_set = set({1, 2, 3, 4})
-my_set = {1, 2, 3, 4}
+	my_set = set({1, 2, 3, 4})
+	my_set = {1, 2, 3, 4}
 
 
 **Add** añade un elemento al set
 
-my_set.add()
+	my_set.add()
 
