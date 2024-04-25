@@ -338,6 +338,7 @@ poped = lista.pop()				Ahora la lista es: [1]
 
 
 **Clear** elimina todos los elementos de la lista.
+
 	lista = [1, 2, 3, "Cuatro"]
 	lista.clear()	
 	print(lista)			Salida: []
