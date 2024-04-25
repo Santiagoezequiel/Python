@@ -215,34 +215,40 @@ print(reverse)
 ### Salteo de Caracteres
 Muestra desde el primer indice hasta el degundo y luego se indica el incremento (de cuanto en cuantos caracteres saltará)
 
-**Abecedario** = “ABCDEFGHIJKLMNOPQ”
+	Abecedario = “ABCDEFGHIJKLMNOPQ”
+	
+	jumped = Abecedario[0:17:2]
 
-**jumped** = Abecedario[0:17:2]
-print(jumped)
+	print(jumped)
 
-**Devuelve:**	ACEGIKMOQ 
+	Devuelve:	ACEGIKMOQ 
  
 
 ### Metodos de Strings
 
 - **Capitalize** pone en mayuscula al primer elemento de la cadena.
-	*texto* = "hola mundo"
+
+	texto = "hola mundo"
 	print(texto.capitalize())  # Salida: Hola mundo
 
 
 - **Upper** pone todos los elemetos en Mayusculas.
+
 	print(texto.upper())  # Salida: HOLA MUNDO
 
 
 - **Lower** pone todos los elementos en Minusculas.
+
 	print(texto.lower())  # Salida: hola mundo
 
 
 - **Tittle** pone en mayuscula la primera letra de cada palabra.
+
 	print(texto.tittle())  # Salida: Hola Mundo
 
 
 - **Count** cuenta la cantidad de veces que aparece una letra en el texto.
+
 	print(texto.count("o"))  # Salida: 2
 
 
@@ -250,25 +256,30 @@ print(jumped)
 Los metodos de strings se pueden concatenar con otros metodos de comprobacion de stings.
 
 - **Isnumeric** verifica si el elemento dado es un numero o no.
+
 	texto = "hola mundo"
 	print(texto.isnumeric())  # Salida: False
 	print("1".isnumeric())  # Salida: True
 
 
 - **Isupper** verifica si el texto tiene todas las letras en Mayusculas.
+
 	print(texto.upper().isupper())  # Salida: True
 
 
 - **Islower** verifica si el texto tiene todas las letras en Minusculas.
+
 	print(texto.lower().islower())  # Salida: True
 
 
 - **Startswith** verifica si el texto comienza con el elemento proporcionado.
+
 	texto = "Ultimo hola mundo"
 	print(texto.lower().startswith("Ul"))  # Salida: True
 
 
 - **Endswith** verifica si el texto termina con el elemento proporcionado.
+
 	texto = "Ultimo hola mundo"
 	print(texto.lower().endswith("do"))  # Salida: True
 
@@ -286,54 +297,59 @@ Las listas son una estructura de datos flexible y dinámica que puede contener e
 
 ##### Sintaxis para crear una lista vacia
 
-my_list = list()
-my_list = [ ] 
+	my_list = list()
+	my_list = [ ] 
 
 
 ##### Sintaxis para crear una lista con elementos
 
-my_list = list([1, 2, 3, 4])
-my_list = [1, 2, 3, 4] 
+	my_list = list([1, 2, 3, 4])
+	my_list = [1, 2, 3, 4] 
 
 
 ##### Sintaxis para imprimir un elemento de la lista.
-
-print(my_list[índice])	
+	
+	print(my_list[índice])	
 
 
 ### Funciones de listas
 
 **Count** cuenta cuantas veces aparece el mismo elemento en la lista
+	
 	print(my_list.count(elemento))
 
 
 **Append** agrega un elemento al final de la lista
+	
 	print(my_list.append(elemento))
 
 
 **Insert** agrega un elemento en la lista con el indice que le indiquemos, haciendo que los demas elementos se desplacen.
+	
 	print(my_list.insert(índice, elemento))
 
 
 **Remove** elimina el elemento seleccionado, si el elemento se repite varias veces en la lista, elimina el primero que coincida.
+	
 	print(my_list.remove(elemento))
 
 
 **Pop** elimina el ultimo elemento de la lista y lo devuelve, si indicamos el indice elimina y devuelve el elemento en ese indice. Este elemento tambien se puede guardar en una variable extra.
+	
 	lista = [1, 2, 3, "Cuatro"]
 	poped = lista.pop()	Poped vale = Cuatro
 	print(lista)	Salida: [1, 2, 3]
 
 No importa en que contexto uses el pop, luego de ejecutarse la lista dejara de tener ese elemento, no importa si lo usas para indicar una variable, dentro del print, o por fuera, todos estos modifican directamente a la lista.
 
-lista = [1, 2, 3, "Cuatro" ]
-lista.pop()						Ahora la lista es: [1, 2, 3]
-print(lista.pop())				Ahora la lista es: [1, 2]
-								Salida:	3
-poped = lista.pop()				Ahora la lista es: [1]
+	lista = [1, 2, 3, "Cuatro" ]
+	lista.pop()						Ahora la lista es: [1, 2, 3]
+	print(lista.pop())				Ahora la lista es: [1, 2]	Salida:	3
+	poped = lista.pop()				Ahora la lista es: [1]
 
 
 **Del** elimina un elemento de una lista y no lo retorna.
+
 	del lista[índice]
 
 
