@@ -345,11 +345,9 @@ poped = lista.pop()				Ahora la lista es: [1]
 
 
 ##### Como modificar un elemento
-lista = [1, 2, 3, "Cuatro"]
-
-lista[1] = "Dos"
-
-print(lista)			Salida: [1, Dos, 3, Cuatro]
+	lista = [1, 2, 3, "Cuatro"]
+	lista[1] = "Dos"
+	print(lista)			Salida: [1, Dos, 3, Cuatro]
 
 
 **Copy** Copia el valor actual de la lista y lo guarda en otra variable. Es una manera eficiente de crear copias de seguridad de la lista actual.
