@@ -216,7 +216,7 @@ print(reverse)
 Muestra desde el primer indice hasta el degundo y luego se indica el incremento (de cuanto en cuantos caracteres saltará)
 
 	Abecedario = “ABCDEFGHIJKLMNOPQ”
-	
+
 	jumped = Abecedario[0:17:2]
 
 	print(jumped)
